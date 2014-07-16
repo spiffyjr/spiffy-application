@@ -1,0 +1,8 @@
+/.idea
+/.vagrant
+/www.pid
+/vendor
+!/public/index.php
+composer.lock
+config/env.config.php
+config/override/*.config.php

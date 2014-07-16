@@ -1,0 +1,13 @@
+{% extends 'layout/layout.twig' %}
+
+{% block content %}
+    <h1>Welcome to SpiffyFramework</h1>
+    <p>This is the output from the Application\Home\IndexAction!</p>
+
+    <p><strong>foo = {{ foo }}</strong></p>
+
+    <p>
+        It took <strong>{{ "%2.2f"|format(time * 1000) }}ms</strong> from bootstrap to action.
+        This does not include render and response time.
+    </p>
+{% endblock %}
