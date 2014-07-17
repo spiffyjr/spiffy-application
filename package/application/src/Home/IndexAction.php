@@ -12,7 +12,7 @@ use Spiffy\Framework\Action\AbstractAction;
  * route are automatically injected into the __invoke() method. If you add arguments to __invoke() that don't
  * exist in the route you will get an exception.
  * 
- * For optional parameters simply set the default value as null, e.g., public function __invoke($id, $optional => null) 
+ * For optional parameters simply set the default value as null, e.g., public function __invoke($id, $optional = null) 
  */
 class IndexAction extends AbstractAction
 {
