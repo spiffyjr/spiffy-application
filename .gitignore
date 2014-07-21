@@ -4,5 +4,5 @@
 /vendor
 !/public/index.php
 composer.lock
-config/env.config.php
+config/env.php
 config/override/*.config.php
