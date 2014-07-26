@@ -9,5 +9,5 @@
  * For more details on what path options are available refer to the Spiffy\Route documentation. 
  */
 return [
-    'home' => ['/{id?:\d+}', 'Application\Home\IndexAction']
+    'home' => ['/', 'Application\Home\IndexAction']
 ];

@@ -6,19 +6,23 @@
             "email": "theman@spiffyjr.me"
         }
     ],
-    "description": "Spiffy\\Application is an application built using SpiffyFramework.",
+    "description": "SpiffyApplication is an application built using SpiffyFramework.",
     "license": "BSD-3-Clause",
+    "repositories": [
+        {"type":"vcs", "url":"git@github.com:spiffyjr/spiffy-framework.git"},
+        {"type":"vcs", "url":"git@github.com:spiffyjr/spiffy-package.git"}
+    ],
     "require": {
         "php": ">=5.4",
 
-        "spiffy/spiffy-dispatch": "~1.0-alpha",
-        "spiffy/spiffy-event": "~1.0-alpha",
-        "spiffy/spiffy-inject": "~1.0-alpha",
-        "spiffy/spiffy-framework": "~1.0-alpha",
-        "spiffy/spiffy-package": "~1.0-alpha",
-        "spiffy/spiffy-route": "~1.0-alpha",
-        "spiffy/spiffy-view": "~1.0-alpha",
-        "spiffy/spiffy-view-twig": "~1.0-alpha"
+        "spiffy/spiffy-dispatch": "~1.0-dev",
+        "spiffy/spiffy-event": "~1.0-dev",
+        "spiffy/spiffy-inject": "~1.0-dev",
+        "spiffy/spiffy-framework": "~1.0-dev",
+        "spiffy/spiffy-package": "~1.0-dev",
+        "spiffy/spiffy-route": "~1.0-dev",
+        "spiffy/spiffy-view": "~1.0-dev",
+        "spiffy/spiffy-view-twig": "~1.0-dev"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.0",

@@ -3,6 +3,7 @@
 namespace Application\Home;
 
 use Spiffy\Framework\Action\AbstractAction;
+use Spiffy\Inject\Annotation as Injector;
 
 /*
  * Instead of controllers Spiffy\Framework uses the idea of single purpose Actions. This reduces the
@@ -14,12 +15,26 @@ use Spiffy\Framework\Action\AbstractAction;
  * 
  * For optional parameters simply set the default value as null, e.g., public function __invoke($id, $optional = null) 
  */
+
+/**
+ * @Injector\Component
+ */
 class IndexAction extends AbstractAction
 {
-    public function __invoke($id = null)
+    /**
+     * @Injector\Method({@Injector\Inject("application.home.home-service")})
+     * 
+     * @param HomeService $homeService
+     */
+    public function __construct(HomeService $homeService)
+    {
+        $this->homeService = $homeService;
+    }
+    
+    public function __invoke()
     {
         return [
-            'foo' => 'bar',
+            'foo' => $this->homeService->getFoo(),
             'time' => microtime(true) - $_SERVER['REQUEST_TIME_FLOAT'],
         ];
     }

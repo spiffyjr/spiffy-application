@@ -1,10 +1,12 @@
 <?php
 
+$env = file_exists(__DIR__ . '/env.php') ? include __DIR__ . '/env.php' : [];
+
 return [
     /*
      * Contains environment specific variables such as usernames and passwords that you do not want to commit to VCS.
      */
-    'environment' => file_exists(__DIR__ . '/env.php') ? include __DIR__ . '/env.php' : [],
+    'environment' => $env,
 
     /*
      * Plugins registered with the application. Spiffy\Framework is event-driven so plugins drive the entire framework.
@@ -18,7 +20,7 @@ return [
      * of time per request but should only be set in production or you will have to clear the cache every time
      * you make a configuration change in a module.
      */
-    'package_config_cache' => null,
+    'package_config_cache' => isset($env['debug']) && $env['debug'] == false ? 'cache' : null,
 
     /*
      * This setting contains the glob pattern (http://us2.php.net/glob) used to determine which files to load

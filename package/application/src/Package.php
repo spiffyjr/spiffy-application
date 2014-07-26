@@ -11,4 +11,11 @@ use Spiffy\Framework\AbstractPackage;
  */
 class Package extends AbstractPackage
 {
+    /**
+     * {@inheritDoc}
+     */
+    public function isAutoloadServicesEnabled()
+    {
+        return true;
+    }
 }

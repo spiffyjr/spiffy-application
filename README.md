@@ -36,9 +36,8 @@ Afterwards, point your browser to http://localhost (php server) or http://localh
 
 ## Benchmarking
 
-To enable benchmarking (performance) mode there are a couple things that need to be done.
+To enable benchmarking (performance) mode just disable debug mode.
 
   1. Ensure `config/env.php` has `'debug' => 'false'`.
-  2. Ensure `config/app.php` has `package_config_cache` set to a proper directory.
   
 Afterwards, run the application once to warm the cache and you should be ready to go.
