@@ -8,10 +8,6 @@
     ],
     "description": "SpiffyApplication is an application built using SpiffyFramework.",
     "license": "BSD-3-Clause",
-    "repositories": [
-        {"type":"vcs", "url":"git@github.com:spiffyjr/spiffy-framework.git"},
-        {"type":"vcs", "url":"git@github.com:spiffyjr/spiffy-package.git"}
-    ],
     "require": {
         "php": ">=5.4",
 
