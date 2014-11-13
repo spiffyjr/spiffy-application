@@ -23,7 +23,7 @@ return [
     'package_config_cache' => isset($env['debug']) && $env['debug'] == false ? 'cache' : null,
 
     /*
-     * This setting contains the glob pattern (http://us2.php.net/glob) used to determine which files to load
+     * This setting contains the glob pattern (http://php.net/glob) used to determine which files to load
      * to override the default configuration. This is useful for configuring different environments (development,
      * staging, production, etc.). By default this pattern loads config/override/*.config.php files.
      */
@@ -35,8 +35,8 @@ return [
     'config_override_flags' => 0,
 
     /*
-     * A list of packages to load. Order is important! Generally you're application should be loaded last so that
-     * it can override any other package. Packages prepended with ? are only loaded in debug mode (default false, set
+     * A list of packages to load. Order is important! Generally your application should be loaded last so that
+     * it can override any other package. Packages prefixed with ? are only loaded in debug mode (default false, set
      * via the environment key above).
      */
     'packages' => [
